@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import yerinImg from "../assets/images/yerin.png";
+import yyyerinImg from "../assets/images/yyyerin.jpg";
 
 export function Hero() {
   return (
-    <section id="hero" className="relative flex min-h-screen items-center overflow-hidden pt-24">
+    <section
+      id="hero"
+      className="relative flex min-h-screen items-center overflow-hidden pt-20 pb-32 sm:pb-40"
+    >
       <div className="dot-texture pointer-events-none absolute inset-0" />
       <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-clay/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 left-10 h-72 w-72 rounded-full bg-sage/10 blur-3xl" />
@@ -23,11 +26,12 @@ export function Hero() {
             Developer
           </h1>
           <p className="typewriter mt-6 max-w-xs border-r-2 border-clay pr-1 text-xl font-semibold text-muted sm:text-2xl">
-            프론트엔드 개발자 한예린입니다
+            프론트엔드 개발자 한예린 입니다.
           </p>
           <p className="mt-6 max-w-md text-base leading-relaxed text-muted">
-            따뜻한 사용자 경험을 만들어가는 프론트엔드 개발자입니다. 꾸준한 사이드
-            프로젝트로 새로운 기술을 익히고, 실제 서비스로 완성하는 것을 좋아합니다.
+            따뜻한 사용자 경험을 만들어가는 프론트엔드 개발자입니다. 꾸준한
+            사이드 프로젝트로 새로운 기술을 익히고, 실제 서비스로 완성하는 것을
+            좋아합니다.
           </p>
 
           <div className="mt-10 flex items-center gap-4">
@@ -55,18 +59,24 @@ export function Hero() {
           className="relative mx-auto w-full max-w-sm"
         >
           <div className="animate-float relative">
-            <div className="absolute inset-6 rounded-[3rem] bg-gradient-to-br from-clay/20 to-sage/20" />
-            <img
-              src={yerinImg}
-              alt="한예린 프로필 일러스트"
-              className="relative w-full drop-shadow-xl"
-            />
+            <div className="absolute -inset-4 rotate-3 rounded-[2.5rem] bg-linear-to-br from-clay/25 to-sage/25" />
+            <div className="relative aspect-square w-full overflow-hidden rounded-4xl shadow-xl ring-1 ring-line">
+              <img
+                src={yyyerinImg}
+                alt="한예린 프로필 사진"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
         </motion.div>
       </div>
 
       <motion.button
-        onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+        onClick={() =>
+          document
+            .getElementById("about")
+            ?.scrollIntoView({ behavior: "smooth" })
+        }
         className="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-xs font-medium text-muted"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
