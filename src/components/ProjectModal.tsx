@@ -38,31 +38,37 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-ink/60 p-4 backdrop-blur-sm sm:p-8"
+          className="fixed inset-0 z-[60] flex items-end justify-center bg-ink/60 backdrop-blur-sm sm:items-center sm:p-8"
           onClick={onClose}
         >
           <motion.div
-            initial={{ opacity: 0, y: 24, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 24, scale: 0.98 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
+            initial={{ opacity: 0, y: "100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "100%" }}
+            transition={{ type: "spring", damping: 30, stiffness: 330 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative max-h-[88vh] w-full max-w-2xl overflow-hidden rounded-3xl bg-card shadow-2xl"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="project-sheet-title"
+            className="relative max-h-[92dvh] w-full max-w-2xl overflow-hidden rounded-t-[2rem] bg-card shadow-2xl sm:max-h-[88vh] sm:rounded-3xl"
           >
+            <div className="absolute inset-x-0 top-0 z-20 flex h-7 items-start justify-center pt-2 sm:hidden">
+              <span className="h-1 w-10 rounded-full bg-line" />
+            </div>
             <button
               onClick={onClose}
               aria-label="닫기"
-              className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-paper/90 text-ink shadow"
+              className="absolute top-4 right-4 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-paper/90 text-ink shadow active:scale-95"
             >
               ✕
             </button>
 
-            <div className="modal-scroll max-h-[88vh] overflow-y-auto">
-              <div className="aspect-video w-full overflow-hidden bg-paper-dim">
+            <div className="modal-scroll max-h-[92dvh] overflow-y-auto overscroll-contain sm:max-h-[88vh]">
+              <div className="aspect-video w-full overflow-hidden bg-paper-dim sm:rounded-t-3xl">
                 <img src={project.image} alt={project.title} className="h-full w-full object-cover" />
               </div>
 
-              <div className="p-6 sm:p-8">
+              <div className="sheet-content p-6 pt-5 sm:p-8">
                 <div className="mb-3 flex flex-wrap items-center gap-2 text-xs font-semibold">
                   <span className="rounded-full bg-clay/10 px-3 py-1 text-clay">
                     {CATEGORY_LABEL[project.category]}
@@ -72,7 +78,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-extrabold text-ink">{project.title}</h3>
+                <h3 id="project-sheet-title" className="text-2xl font-extrabold text-ink">{project.title}</h3>
 
                 <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-muted">
                   {project.description}

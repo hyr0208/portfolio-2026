@@ -20,7 +20,7 @@ export function BackToTop() {
           exit={{ opacity: 0, y: 12 }}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="맨 위로 이동"
-          className="fixed right-6 bottom-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-ink text-paper shadow-lg transition-transform hover:-translate-y-0.5 sm:right-10 sm:bottom-10"
+          className="fixed right-6 bottom-6 z-40 hidden h-11 w-11 items-center justify-center rounded-full bg-ink text-paper shadow-lg transition-transform hover:-translate-y-0.5 md:flex sm:right-10 sm:bottom-10"
         >
           ↑
         </motion.button>
