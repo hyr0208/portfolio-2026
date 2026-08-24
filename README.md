@@ -2,7 +2,7 @@
 
 따뜻한 사용자 경험을 만들어가는 프론트엔드 개발자 **한예린**의 2026년 포트폴리오입니다.
 
-🔗 **[portfolio.yyyerin.co.kr](https://portfolio.yyyerin.co.kr)**
+🔗 **[portfolio2026.yyyerin.co.kr](https://portfolio2026.yyyerin.co.kr/)**
 
 <p align="center">
   <img src="./public/portfolio.png" alt="포트폴리오 히어로 섹션 스크린샷" width="800" />
@@ -77,4 +77,4 @@ src/
 
 ## 🚀 배포
 
-`https://portfolio.yyyerin.co.kr` 에 배포되어 있습니다.
+`https://portfolio2026.yyyerin.co.kr` 에 배포되어 있습니다.
