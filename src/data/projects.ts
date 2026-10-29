@@ -1,5 +1,6 @@
 import type { ProjectItem } from "./types";
 
+import finda from "../assets/images/finda.png";
 import gcms from "../assets/images/gcms.png";
 import sfis from "../assets/images/sfis.png";
 import ownermind from "../assets/images/ownermind.png";
@@ -18,6 +19,47 @@ import housingtracker from "../assets/images/housingtracker.png";
 import nareulbom from "../assets/images/nareulbom.png";
 
 export const PROJECTS: ProjectItem[] = [
+  {
+    id: 18,
+    title: "핀다 여신관리시스템 MSA 전환 (nTree.NEXT)",
+    description:
+      "핀다의 여신관리시스템을 레거시 구조에서 MSA 기반 신규 시스템(nTree.NEXT)으로 전환하는 프로젝트입니다.\n대출 심사·채권·고객·상품·공통관리 등 도메인별 서비스로 분리된 백엔드 위에, Next.js 기반 프론트엔드와 BFF를 구성하고 Electron 데스크톱 앱으로 배포합니다. 프론트엔드 개발을 맡아 레거시 화면 이식과 공통 컴포넌트·대시보드·인증 기능 개발을 진행했습니다.",
+    image: finda,
+    tags: ["팀", "웹"],
+    skills: [
+      "react",
+      "ts",
+      "tailwind",
+      "electron",
+      "reactquery",
+      "axios",
+      "storybook",
+      "docker",
+    ],
+    apis: ["RealGrid API"],
+    techHighlights: [
+      "Next.js (App Router) + React 19 + TypeScript",
+      "BFF (Next.js API Routes)",
+      "Electron 데스크톱 앱",
+      "Zustand + TanStack Query",
+      "Tailwind CSS v4",
+      "Storybook + Vitest",
+    ],
+    category: "work",
+    duration: "long-term",
+    hasDetail: true,
+    mainFeatures: [
+      "레거시 여신관리 화면(심사원장, 채권원장, 고객통합뷰, 상품관리 등)을 MSA 구조의 신규 프론트엔드로 이식",
+      "Next.js API Routes 기반 BFF에서 httpOnly 쿠키 인증과 Gateway 프록시 처리",
+      "로그인 OTP·MFA 인증, 비밀번호 변경/초기화 등 인증 흐름 구현",
+      "메인 대시보드에 결재함(받은 결재·결재요청 필요·보낸 결재)과 도메인별 화면 런처 추가",
+      "RealGrid 그리드의 컬럼 순서 드래그 저장/복원, 표시/숨김 설정과 라이선스 오류 대비 failover 그리드 구현",
+      "엑셀 다운로드를 서버 생성 방식으로 전환하고 다운로드 권한·사유 입력을 공통 훅(useExcel)으로 구조화",
+      "주민등록번호·성명 등 개인정보 마스킹과 식별정보 조회 이력 기록 처리",
+      "사용자별 메뉴 배치(좌/상단/우), 즐겨찾기 서버 연동 등 개인화 기능 구현",
+      "Tiptap 기반 화면 도움말 에디터(이미지 삽입, 미리보기) 구현",
+    ],
+  },
   {
     id: 1,
     title: "저축은행 중앙회 중도금대출 관리 시스템",

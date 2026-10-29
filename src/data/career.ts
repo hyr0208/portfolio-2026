@@ -13,6 +13,7 @@ export const CAREER: CareerItem[] = [
       "React, Next.js를 활용한 저축은행 디지털 전환 홈페이지 유지보수 작업",
       "React, Javascript를 활용한 저축은행 차세대 시스템 프로젝트 작업",
       "React, Electron을 활용한 저축은행 차세대 시스템 유지보수 작업",
+      "Next.js, Electron을 활용한 핀다 여신관리시스템 MSA 전환 프로젝트 작업",
     ],
     skills: [
       "react",
