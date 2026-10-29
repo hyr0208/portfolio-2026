@@ -12,6 +12,10 @@ import soolgame from "../assets/images/soolgame-landing.png";
 import riderlink from "../assets/images/riderlink.png";
 import invitationLetter from "../assets/images/InvitationLetter.png";
 import invitationPortfolio from "../assets/images/invitationPortfolio.png";
+import birthday from "../assets/images/birthday.png";
+import noteforest from "../assets/images/noteforest.png";
+import housingtracker from "../assets/images/housingtracker.png";
+import nareulbom from "../assets/images/nareulbom.png";
 
 export const PROJECTS: ProjectItem[] = [
   {
@@ -472,6 +476,128 @@ export const PROJECTS: ProjectItem[] = [
       "라이브 프리뷰 페이지를 통한 풀페이지 템플릿 확인",
       "EmailJS를 활용한 백엔드 없는 제작 문의 이메일 전송 구현",
       "모바일/데스크톱 반응형 레이아웃 지원",
+    ],
+  },
+  {
+    id: 14,
+    title: "생일 축하 페이지 (Birthday Little Archive)",
+    description:
+      "친구의 생일을 축하하기 위해 만든 스크롤형 추억 페이지입니다.\n함께 찍은 사진들을 편지처럼 이어 붙이고, 촛불 끄기·선물상자 열기 같은 작은 인터랙션과 엽서 형태의 마무리 메시지로 구성했습니다.",
+    image: birthday,
+    tags: ["솔로", "반응형", "사이드"],
+    skills: ["react", "ts", "tailwind", "vite", "github"],
+    techHighlights: [
+      "React 19 + TypeScript",
+      "Vite 8",
+      "Tailwind CSS 4",
+      "CSS 애니메이션",
+    ],
+    category: "single",
+    duration: "side",
+    githubUrl: "https://github.com/hyr0208/birthday-little-archive",
+    siteUrl: "https://hbd.yyyerin.co.kr",
+    hasDetail: true,
+    mainFeatures: [
+      "사진을 세로로 이어 붙인 스크롤형 추억 아카이브 레이아웃",
+      "촛불을 하나씩 끄고 다시 붙일 수 있는 케이크 미니게임",
+      "클릭하면 메시지가 열리는 선물상자 인터랙션",
+      "CSS 변수로 위치·크기·색·속도를 제어하는 배경 컨페티 애니메이션",
+      "이미지 레이지 로딩으로 사진 위주 페이지의 초기 로딩 부담 완화",
+      "OG 이미지 설정으로 메신저 공유 시 미리보기 제공",
+    ],
+  },
+  {
+    id: 15,
+    title: "노트숲 (Note Forest)",
+    description:
+      "여러 기기에서 이어 쓰는 개인 메모 웹앱입니다.\n직접 쓰려고 만든 서비스로, 메모를 빠르게 작성하고 폴더·즐겨찾기·검색으로 정리할 수 있습니다. 웹 브라우저와 설치형 macOS 앱에서 같은 계정으로 사용하며, 계정별 클라우드 저장과 실시간 동기화를 지원합니다.",
+    image: noteforest,
+    tags: ["솔로", "반응형", "사이드"],
+    skills: ["react", "ts", "tailwind", "vite", "github"],
+    apis: ["Supabase Auth", "Supabase Postgres", "Supabase Realtime"],
+    techHighlights: [
+      "React 19 + TypeScript",
+      "Vite 8",
+      "Tailwind CSS 4",
+      "Tiptap 에디터",
+      "Supabase (Auth, Realtime, RLS)",
+      "macOS 앱 (Swift + WKWebView)",
+    ],
+    category: "single",
+    duration: "side",
+    githubUrl: "https://github.com/hyr0208/note-forest",
+    siteUrl: "https://notes.yyyerin.co.kr",
+    hasDetail: true,
+    mainFeatures: [
+      "Tiptap 기반 서식이 바로 보이는 메모 편집기 (체크리스트, 표, 이미지, 실행 취소/다시 실행)",
+      "기존 Markdown 메모를 그대로 읽고 Markdown으로 저장하는 편집 구조",
+      "폴더, 즐겨찾기, 검색, 휴지통 복원 기능",
+      "메모별 저장 요청 순서 보장으로 늦은 응답이 최신 입력을 덮어쓰지 않도록 처리",
+      "Supabase Auth 이메일 로그인과 Row Level Security로 계정별 메모 접근 제한",
+      "Supabase Realtime을 활용한 여러 기기 간 실시간 동기화",
+      "Swift + WKWebView로 만든 macOS 설치형 앱과 GitHub Actions Release 자동 배포",
+      "Vitest + Testing Library 테스트 및 Cloudflare Pages 배포",
+    ],
+  },
+  {
+    id: 16,
+    title: "내 차례 (Housing Tracker)",
+    description:
+      "공공임대·행복주택 예비입주자의 신청 내역과 순번을 관리하고, 입주 준비를 도와주는 iOS·Android 모바일 앱입니다.\n개인 예비순번과 순번 변화 이력을 기록하고, 마이홈 공공 API로 단지별 공개 대기인원을 주기적으로 조회해 변동이 생기면 푸시 알림으로 알려줍니다.",
+    image: housingtracker,
+    tags: ["솔로", "모바일 앱", "사이드"],
+    skills: ["react", "ts", "github"],
+    apis: ["마이홈 공공데이터 API", "카카오 로그인 SDK", "Expo Push Notification"],
+    techHighlights: [
+      "React Native 0.86 + Expo 57",
+      "TypeScript + Expo Router",
+      "Node.js 동기화 서버",
+      "Expo Notifications 푸시 알림",
+    ],
+    category: "single",
+    duration: "side",
+    githubUrl: "https://github.com/hyr0208/housing-tracker-mobile",
+    hasDetail: true,
+    mainFeatures: [
+      "Expo와 React Native를 활용한 iOS·Android 크로스 플랫폼 앱 개발",
+      "네이티브 카카오 로그인 SDK 연동",
+      "공고명·공식 단지명·지역·예비순번 등록 및 순번 변화 이력 관리",
+      "Node.js 동기화 서버가 마이홈 공공 API를 주기 조회해 공개 대기인원 변동 감지",
+      "변동 발생 시 앱 내 알림 및 Expo Push 알림 발송",
+      "신청별 입주 준비 체크리스트와 진행률 표시",
+      "개인 순번과 공개 대기현황을 분리해 관리하고, 민감한 개인 인증 정보는 수집하지 않도록 설계",
+      "AsyncStorage 기반 로컬 데이터 저장 및 마이그레이션",
+    ],
+  },
+  {
+    id: 17,
+    title: "나를봄 (Nareulbom)",
+    description:
+      "약·영양제 검색과 개인 건강정보 기반 맞춤 건강관리를 목표로 하는 iOS·Android 모바일 앱입니다. (개발 중)\n첫 실행 시 건강정보 문진을 거쳐 관리 목표에 맞는 홈 화면을 구성하고, 식약처 공공데이터로 의약품을 검색해 복용 목록과 일정을 관리할 수 있습니다.",
+    image: nareulbom,
+    tags: ["솔로", "모바일 앱", "사이드"],
+    skills: ["react", "ts", "docker", "github"],
+    apis: ["식약처 e약은요 API", "의약품 제품 허가정보 API"],
+    techHighlights: [
+      "React Native 0.86 + Expo 57",
+      "TypeScript + Expo Router",
+      "Node.js 검색 API 서버",
+      "Better Auth (카카오·Apple 로그인)",
+      "Docker",
+    ],
+    category: "single",
+    duration: "side",
+    githubUrl: "https://github.com/hyr0208/nareulbom-mobile",
+    hasDetail: true,
+    mainFeatures: [
+      "Expo와 React Native를 활용한 iOS·Android 크로스 플랫폼 앱 개발",
+      "관리 목표·기본정보·건강 상태·복용 제품·생활습관·영양정보 6단계 건강정보 문진",
+      "e약은요 / 제품 허가정보 기반 의약품 검색, 더 보기 페이지네이션, 상세 및 출처 표시",
+      "검색되지 않는 약·영양제 직접 등록과 복용 목록·복용량·일정 관리",
+      "API 키를 클라이언트에 노출하지 않는 Node.js 검색 API 서버와 입력 검증, 상류 오류 구분",
+      "다음 페이지 요청 실패 시 기존 결과 보존 및 재시도 처리",
+      "Better Auth 기반 카카오·Apple 로그인 및 서버 세션 연동",
+      "Docker 실행 설정과 서버 회귀 테스트 구성",
     ],
   },
 ];
